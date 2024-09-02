@@ -1,0 +1,131 @@
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.meme-generator {
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* meme-title */
+.meme-title {
+    opacity: 1; 
+    transform: translateY(20px); 
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+  
+.meme-title.show {
+  opacity: 2; 
+  transform: translateY(0); 
+}
+
+/* Responsive Image */
+.meme-generator img {
+    width: 100%;
+    height: auto;
+    max-height: 530px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #a79393 ;
+}
+.meme-generator img:hover {
+    transform: scale(1.01);
+    box-shadow: 0 4px 8px rgba(128, 128, 130, 0.6); 
+    transition: all 300ms ease-in-out; 
+}
+
+
+/* Button Styling */
+.meme-generator .generate-meme-btn {
+    padding: 10px 30px;
+    border: none;
+    border-radius: 4px;
+    margin: 24px 0;
+    font-size: 18px;
+    color: #fff;
+    background-color: #f64d4d;
+    cursor: pointer;
+    transition: all 300ms ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+/* Button Hover Effect */
+.meme-generator .generate-meme-btn:hover {
+    background-color: #d33c3c;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    letter-spacing: 1px;
+}
+
+/* Author Styling */
+.meme-generator .meme-author {
+    margin: 16px 0;
+    font-size: 16px;
+    color: #666;
+}
+
+
+/* Footer styling */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+
+/* Footer text style */
+footer div {
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: #0693cf;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .meme-generator {
+        padding: 10px;
+    }
+
+    .meme-generator .generate-meme-btn {
+        font-size: 16px;
+        padding: 8px 20px;
+    }
+
+    footer {
+        padding: 8px 0;
+    }
+
+    footer div {
+        font-size: 13px;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .meme-generator .generate-meme-btn {
+        font-size: 14px;
+        padding: 6px 15px;
+    }
+
+    .meme-generator .meme-author {
+        font-size: 14px;
+    }
+
+    footer {
+        padding: 6px 0;
+    }
+
+    footer div {
+        font-size: 12px;
+    }
+}
